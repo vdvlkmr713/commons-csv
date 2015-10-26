@@ -195,6 +195,7 @@ CSV files of various types.
         </configuration>
       </plugin>
 
+<reporting>
       <!-- We need to add our test data files to rat exclusions -->
       <!-- Needed for command-line access, e.g mvn apache-rat:rat and mvn apache-rat:check -->
       <plugin>
@@ -211,7 +212,7 @@ CSV files of various types.
     </plugins>
   </build>
 
-  <reporting>
+  
     <plugins>
       <!-- Keep in sync with build config above -->
       <plugin>
