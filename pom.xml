@@ -17,12 +17,18 @@ limitations under the License.
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
- 
+
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-parent</artifactId>
     <version>38</version>
-    
-    <name>Apache Commons CSV</name>
+	
+	<parent>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-parent</artifactId>
+    <version>38</version>
+  </parent>
+ 
+  <name>Apache Commons CSV</name>
   <url>http://commons.apache.org/proper/commons-csv/</url>
   <description>
 The Apache Commons CSV library provides a simple interface for reading and writing
@@ -130,6 +136,7 @@ CSV files of various types.
     <commons.encoding>UTF-8</commons.encoding>
 
     <checkstyle.version>2.16</checkstyle.version>
+    <commons.rat.version>0.11</commons.rat.version>
     <checkstyle.header.file>${basedir}/LICENSE-header.txt</checkstyle.header.file>
     <checkstyle.resourceExcludes>LICENSE.txt, NOTICE.txt</checkstyle.resourceExcludes>
   </properties>
@@ -198,17 +205,7 @@ CSV files of various types.
         <configuration>
           <excludes>
             <exclude>src/test/resources/CSVFileParser/bom.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/test.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_default.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_default_comment.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_rfc4180.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_rfc4180_trim.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85_default.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85_ignoreEmpty.txt</exclude>
-            <exclude>src/test/resources/ferc.gov/contract.txt</exclude>
-            <exclude>src/test/resources/ferc.gov/transaction.txt</exclude>
-          </excludes>
+            </excludes>
         </configuration>
       </plugin>
     </plugins>
@@ -302,29 +299,6 @@ CSV files of various types.
         <version>2.0</version>
       </plugin>
 
-      <!-- We need to add our test data files to rat exclusions -->
-      <plugin>
-        <groupId>org.apache.rat</groupId>
-        <artifactId>apache-rat-plugin</artifactId>
-        <version>${commons.rat.version}</version>
-        <!-- Should agree with config in build section -->
-        <configuration>
-          <excludes>
-            <exclude>src/test/resources/CSVFileParser/bom.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/test.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_default.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_default_comment.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_rfc4180.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_rfc4180_trim.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85_default.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85_ignoreEmpty.txt</exclude>
-            <exclude>src/test/resources/ferc.gov/contract.txt</exclude>
-            <exclude>src/test/resources/ferc.gov/transaction.txt</exclude>
-          </excludes>
-        </configuration>
-      </plugin>
-    </plugins>
   </reporting>
 
   <profiles>
