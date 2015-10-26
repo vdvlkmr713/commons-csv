@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- /*
+ 
 package org.apache.commons.csv;
 
 import static org.apache.commons.csv.CSVFormat.RFC4180;
@@ -42,7 +42,7 @@ import org.junit.Test;
  *
  *
  * @version $Id$
- 
+ */
 public class CSVFormatTest {
 
     private static void assertNotEquals(final Object right, final Object left) {
@@ -455,4 +455,4 @@ public class CSVFormatTest {
         assertEquals(CRLF, formatWithRecordSeparator.getRecordSeparator());
     }
 }
-*/
+
