@@ -13,7 +13,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ 
 
 package org.apache.commons.csv;
 
@@ -57,7 +57,7 @@ import org.junit.Test;
  * that the parser itself fails if the lexer has problems...).
  *
  * @version $Id$
- */
+ 
 public class CSVParserTest {
 
     private static final String CSV_INPUT = "a,b,c,d\n" + " a , b , 1 2 \n" + "\"foo baar\", b,\n"
@@ -974,3 +974,4 @@ public class CSVParserTest {
         parser.close();
     }
 }
+*/
