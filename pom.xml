@@ -1,3 +1,5 @@
+
+
 <?xml version="1.0"?>
 <!--
 Licensed to the Apache Software Foundation (ASF) under one or more
@@ -191,7 +193,8 @@ CSV files of various types.
         </configuration>
       </plugin>
 
-      </build>
+      </plugins>
+  </build>
 
   <reporting>
     <plugins>
@@ -285,7 +288,7 @@ CSV files of various types.
       <plugin>
         <groupId>org.apache.rat</groupId>
         <artifactId>apache-rat-plugin</artifactId>
-        <version>0.11</version>
+        <version>$0.11</version>
         <!-- Should agree with config in build section -->
         <configuration>
           <excludes>
