@@ -1,5 +1,3 @@
-
-
 <?xml version="1.0"?>
 <!--
 Licensed to the Apache Software Foundation (ASF) under one or more
@@ -193,6 +191,8 @@ CSV files of various types.
         </configuration>
       </plugin>
 
+      <!-- We need to add our test data files to rat exclusions -->
+      <!-- Needed for command-line access, e.g mvn apache-rat:rat and mvn apache-rat:check -->
       </plugins>
   </build>
 
@@ -288,22 +288,12 @@ CSV files of various types.
       <plugin>
         <groupId>org.apache.rat</groupId>
         <artifactId>apache-rat-plugin</artifactId>
-        <version>$0.11</version>
+        <version>0.11</version>
         <!-- Should agree with config in build section -->
         <configuration>
           <excludes>
             <exclude>src/test/resources/CSVFileParser/bom.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/test.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_default.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_default_comment.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_rfc4180.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/test_rfc4180_trim.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85.csv</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85_default.txt</exclude>
-            <exclude>src/test/resources/CSVFileParser/testCSV85_ignoreEmpty.txt</exclude>
-            <exclude>src/test/resources/ferc.gov/contract.txt</exclude>
-            <exclude>src/test/resources/ferc.gov/transaction.txt</exclude>
-          </excludes>
+            </excludes>
         </configuration>
       </plugin>
     </plugins>
