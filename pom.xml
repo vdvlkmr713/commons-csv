@@ -203,6 +203,7 @@ CSV files of various types.
             <exclude>src/test/resources/CSVFileParser/test.csv</exclude>
             <exclude>src/test/resources/CSVFileParser/test_default.txt</exclude>
             <exclude>src/test/resources/CSVFileParser/test_default_comment.txt</exclude>
+            <exclude>src/test/resources/CSVFileParser/test_rfc4180.txt</exclude>
             <exclude>src/test/resources/CSVFileParser/test_rfc4180_trim.txt</exclude>
             <exclude>src/test/resources/CSVFileParser/testCSV85.csv</exclude>
             <exclude>src/test/resources/CSVFileParser/testCSV85_default.txt</exclude>
@@ -315,7 +316,7 @@ CSV files of various types.
             <exclude>src/test/resources/CSVFileParser/test.csv</exclude>
             <exclude>src/test/resources/CSVFileParser/test_default.txt</exclude>
             <exclude>src/test/resources/CSVFileParser/test_default_comment.txt</exclude>
-            
+            <exclude>src/test/resources/CSVFileParser/test_rfc4180.txt</exclude>
             <exclude>src/test/resources/CSVFileParser/test_rfc4180_trim.txt</exclude>
             <exclude>src/test/resources/CSVFileParser/testCSV85.csv</exclude>
             <exclude>src/test/resources/CSVFileParser/testCSV85_default.txt</exclude>
