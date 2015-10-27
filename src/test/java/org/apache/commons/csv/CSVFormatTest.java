@@ -17,6 +17,7 @@
 
 package org.apache.commons.csv;
 
+import static org.apache.commons.csv.CSVFormat.RFC4180;
 import static org.apache.commons.csv.Constants.CR;
 import static org.apache.commons.csv.Constants.CRLF;
 import static org.apache.commons.csv.Constants.LF;
@@ -294,7 +295,7 @@ public class CSVFormatTest {
     public void testQuotePolicyNoneWithoutEscapeThrowsException() {
         CSVFormat.newFormat('!').withQuoteMode(QuoteMode.NONE);
     }
-/*
+
     @Test
     public void testRFC4180() {
         assertEquals(null, RFC4180.getCommentMarker());
@@ -305,7 +306,7 @@ public class CSVFormatTest {
         assertEquals(null, RFC4180.getQuoteMode());
         assertEquals("\r\n", RFC4180.getRecordSeparator());
     }
-*/
+
     @SuppressWarnings("boxing") // no need to worry about boxing here
     @Test
     public void testSerialization() throws Exception {
