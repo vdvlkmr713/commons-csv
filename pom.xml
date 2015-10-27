@@ -210,7 +210,7 @@ CSV files of various types.
             <exclude>src/test/resources/CSVFileParser/testCSV85_ignoreEmpty.txt</exclude>
             <exclude>src/test/resources/ferc.gov/contract.txt</exclude>
             <exclude>src/test/resources/ferc.gov/transaction.txt</exclude>
-			<exclude>src/test/resources/perf/worldcitiespop.txt.gz</exclude>
+	    <exclude>src/test/resources/perf/worldcitiespop.txt.gz</exclude>
              </excludes>
         </configuration>
       </plugin>
@@ -323,7 +323,7 @@ CSV files of various types.
             <exclude>src/test/resources/CSVFileParser/testCSV85_ignoreEmpty.txt</exclude>
             <exclude>src/test/resources/ferc.gov/contract.txt</exclude>
             <exclude>src/test/resources/ferc.gov/transaction.txt</exclude>
-	    <exclude>src/test/resources/perf/worldcitiespop.txt.gz</exclude>
+			<exclude>src/test/resources/perf/worldcitiespop.txt.gz</exclude>
             </excludes>
         </configuration>
       </plugin>
