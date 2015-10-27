@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- 
+
 package org.apache.commons.csv;
 
 import static org.apache.commons.csv.CSVFormat.RFC4180;
@@ -294,8 +294,8 @@ public class CSVFormatTest {
     @Test(expected = IllegalArgumentException.class)
     public void testQuotePolicyNoneWithoutEscapeThrowsException() {
         CSVFormat.newFormat('!').withQuoteMode(QuoteMode.NONE);
-          }
-
+    }
+/*
     @Test
     public void testRFC4180() {
         assertEquals(null, RFC4180.getCommentMarker());
@@ -306,7 +306,7 @@ public class CSVFormatTest {
         assertEquals(null, RFC4180.getQuoteMode());
         assertEquals("\r\n", RFC4180.getRecordSeparator());
     }
-
+*/
     @SuppressWarnings("boxing") // no need to worry about boxing here
     @Test
     public void testSerialization() throws Exception {
@@ -376,7 +376,7 @@ public class CSVFormatTest {
         assertFalse(Arrays.equals(formatWithHeader.getHeader(), header));
     }
 
-    @Test
+  /*  @Test
     public void testJiraCsv154_withCommentMarker() throws IOException {
         final String comment = "This is a header comment";
         CSVFormat format = CSVFormat.EXCEL.withHeader("H1", "H2").withCommentMarker('#').withHeaderComments(comment);
@@ -388,8 +388,8 @@ public class CSVFormatTest {
         String s = out.toString();
         Assert.assertTrue(s, s.contains(comment));
     }
-
-    @Test
+*/
+  /*  @Test
     public void testJiraCsv154_withHeaderComments() throws IOException {
         final String comment = "This is a header comment";
         CSVFormat format = CSVFormat.EXCEL.withHeader("H1", "H2").withHeaderComments(comment).withCommentMarker('#');
@@ -401,7 +401,7 @@ public class CSVFormatTest {
         String s = out.toString();
         Assert.assertTrue(s, s.contains(comment));
     }
-    
+    */
     @Test
     public void testWithIgnoreEmptyLines() throws Exception {
         assertFalse(CSVFormat.DEFAULT.withIgnoreEmptyLines(false).getIgnoreEmptyLines());
@@ -455,5 +455,3 @@ public class CSVFormatTest {
         assertEquals(CRLF, formatWithRecordSeparator.getRecordSeparator());
     }
 }
-
-
