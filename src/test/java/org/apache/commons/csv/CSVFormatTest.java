@@ -294,7 +294,7 @@ public class CSVFormatTest {
     @Test(expected = IllegalArgumentException.class)
     public void testQuotePolicyNoneWithoutEscapeThrowsException() {
         CSVFormat.newFormat('!').withQuoteMode(QuoteMode.NONE);
-    }
+          }
 
     @Test
     public void testRFC4180() {
